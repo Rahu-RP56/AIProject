@@ -28,7 +28,7 @@ async def register(user: UserCreate, db: AsyncSession = Depends(get_db)):
     )
     db.add(new_user)
     await db.commit()
-    return {"msg": "User created successfully"}
+    return {"msg": "User created successfully_ok"}
 
 @router.post("/login")
 async def login(form_data: OAuth2PasswordRequestForm = Depends(), db: AsyncSession = Depends(get_db)):
